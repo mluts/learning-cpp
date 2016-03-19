@@ -7,6 +7,7 @@ int main() {
   cout << "I'm asking you some silly question. (y/n)\n";
 
   while(!did_answer) {
+    // takes only one char at a time
     cin >> answer;
     switch(answer) {
       case 'y':
