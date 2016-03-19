@@ -1,0 +1,16 @@
+require 'rake/clean'
+
+
+SRC = FileList['*.cpp']
+CC = "gcc -Wall -lstdc++"
+
+FILES = Hash[SRC.map { |src| [File.basename(src, '.cpp'), src] }]
+CLEAN << FILES.keys
+
+FILES.each do |fname, src|
+  file fname => src do |t|
+    sh "#{CC} #{t.prerequisites.join(" ")} -o #{t.name}"
+  end
+end
+
+task default: FILES.keys
