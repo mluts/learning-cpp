@@ -52,7 +52,7 @@ void rotate_file(std::string fname) {
 
 int main(const int argc, const char **argv) {
   if(argc < 2) {
-    std::cout << "Wrong number of arguments!";
+    std::cout << "Wrong number of arguments!\n";
     show_usage();
     return 1;
   }
