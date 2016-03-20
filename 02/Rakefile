@@ -1,0 +1,23 @@
+require 'rake/clean'
+
+FILES = {
+  'add' => ['add.cpp', 'main.cpp'],
+  'gdb' => ['gdb.cpp'],
+  'add2' => ['add2.cpp'],
+  'sizes' => ['sizes.cpp'],
+  'overflow' => ['overflow.cpp'],
+  'cat' => ['cat.cpp']
+}
+
+CLEAN << FILES.keys
+
+GCC = 'gcc -std=c++11 -g -Wall -lstdc++'
+
+FILES.each do |target, prerequisites|
+  desc "Compile #{target} from #{prerequisites.join(' ')}"
+  file target => prerequisites do |t|
+    sh "#{GCC} #{t.prerequisites.join(' ')} -o #{t.name}"
+  end
+end
+
+task default: FILES.keys
