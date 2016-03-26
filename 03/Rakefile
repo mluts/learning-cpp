@@ -1,7 +1,7 @@
 require 'rake/clean'
 
 FILES = {
-  'rot13' => ['rot13.cpp']
+  'ask' => ['ask.cpp'],
 }
 
 CLEAN << FILES.keys

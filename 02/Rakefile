@@ -6,7 +6,9 @@ FILES = {
   'add2' => ['add2.cpp'],
   'sizes' => ['sizes.cpp'],
   'overflow' => ['overflow.cpp'],
-  'cat' => ['cat.cpp']
+  'cat' => ['cat.cpp'],
+  'choose' => ['choose.cpp'],
+  '1to20' => ['1to20.cpp']
 }
 
 CLEAN << FILES.keys
