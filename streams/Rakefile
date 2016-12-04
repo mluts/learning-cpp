@@ -1,0 +1,11 @@
+require 'rake/clean'
+CLEAN << 'read-file'
+
+# -D_GLIBCXX_USE_CXX11_ABI=0 is required for working fstream exceptions
+GCC = 'gcc -std=c++11 -Wall -lstdc++ -D_GLIBCXX_USE_CXX11_ABI=0'
+
+COMPILE = ->(t) { sh "#{GCC} -o #{t.name} #{t.prerequisites.join(' ')}" }
+
+file 'read-file' => 'read-file.cpp', &COMPILE
+
+task default: 'read-file'
