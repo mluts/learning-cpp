@@ -13,5 +13,5 @@ they are just terminating the program. The fix is available in streams/Rakefile
 ## Some links for C++
 
  * [C++ for C programmers](http://www.4p8.com/eric.brasseur/cppcen.html),
-   because i have some small C experience and generally like C more than other
+   because i have little C experience and generally like C more than other
    languages.
