@@ -1,4 +1,4 @@
-## Michael learns C++ !
+# Michael learns C++ !
 
 My code scetches which i write to learn the language. I don't like it, but
 definitely should dig deeper, at least for graphics programming. Graphics is
